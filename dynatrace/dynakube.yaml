@@ -1,0 +1,30 @@
+---
+apiVersion: dynatrace.com/v1beta2
+kind: DynaKube
+metadata:
+  name: unguard
+  namespace: dynatrace
+  annotations:
+    feature.dynatrace.com/k8s-app-enabled: "true"
+spec:
+  apiUrl: ENVIRONMENT_URL_PLACEHOLDER/api
+
+  metadataEnrichment:
+    enabled: true
+  oneAgent:
+    applicationMonitoring:
+      useCSIDriver: true
+  activeGate:
+    capabilities:
+      - routing
+      - kubernetes-monitoring
+
+    group: unguard
+
+    resources:
+      requests:
+        cpu: 5m
+        memory: 51Mi
+      limits:
+        cpu: 1000m
+        memory: 1.5Gi
