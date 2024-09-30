@@ -38,18 +38,18 @@
 	},
 
 	// Use 'postCreateCommand' to run commands after the container is created.
-	"postCreateCommand": ".devcontainer/post-create.sh"
+	"postCreateCommand": ".devcontainer/post-create.sh",
 
 	// Add recommended secrets
-	// "secrets": {
-	//  	  "DT_ENDPOINT": {
-	//  		"description": "eg. https://abc12345.live.dynatrace.com"
-	// 	},
-	// 	  "DT_TOKEN": {
-	//     	        "description": "Dynatrace API token with these permissions: Ingest metrics, Ingest logs, Ingest events, Ingest OpenTelemetry, Read metrics, Write settings"
-	// 	},
-	// 	  "OPEN_AI_TOKEN": {
-	// 		"description": "OpenAI API Token. Go to https://platform.openai.com/api-keys"
-	// 	}
-	// }
+	"secrets": {
+	 	  "DT_ENV_ID_OBSLAB_SQL_INJECTION_DETECTION": {
+	 		"description": "eg. acb12345 from https://abc12345.live.dynatrace.com"
+		},
+		  "DT_ENVIRONMENT_OBSLAB_SQL_INJECTION_DETECTION": {
+	    	        "description": "live, sprint or dev. Defaults to live"
+		},
+		  "DT_API_TOKEN_OBSLAB_SQL_INJECTION_DETECTION": {
+			"description": "API token with entities.read, settings.read, settings.write, DataExport, InstallerDownload, activeGateTokenManagement.create, metrics.ingest"
+		  }
+	}
 }
