@@ -38,6 +38,8 @@ kubectl -n dynatrace create secret generic unguard --from-literal=apiToken=$DT_A
 helm install dynatrace-operator oci://public.ecr.aws/dynatrace/dynatrace-operator --namespace dynatrace --atomic --values values.yaml
 kubectl apply -f dynatrace/dynakube.yaml
 
+kubectl -n dynatrace wait --for=condition=Ready --all --timeout 300s pod
+
 #############################################################################
 # Install MariaDB
 helm install unguard-mariadb bitnami/mariadb --version 11.5.7 --set primary.persistence.enabled=false --wait --namespace unguard --create-namespace
