@@ -31,12 +31,12 @@ helm repo update
 #############################################################################
 # Install OneAgent
 # Replace placeholders for dynakube
-sed -i "s@ENVIRONMENT_URL_PLACEHOLDER@$full_gen2_url@g" dynakube.yaml
+sed -i "s@ENVIRONMENT_URL_PLACEHOLDER@$full_gen2_url@g" dynatrace/dynakube.yaml
 
 kubectl create namespace dynatrace
 kubectl -n dynatrace create secret generic unguard --from-literal=apiToken=$DT_API_TOKEN_OBSLAB_SQL_INJECTION_DETECTION --from-literal=dataIngestToken=$DT_API_TOKEN_OBSLAB_SQL_INJECTION_DETECTION
 helm install dynatrace-operator oci://public.ecr.aws/dynatrace/dynatrace-operator --namespace dynatrace --atomic --values values.yaml
-kubectl apply -f dynakube.yaml
+kubectl apply -f dynatrace/dynakube.yaml
 
 #############################################################################
 # Install MariaDB
