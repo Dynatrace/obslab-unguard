@@ -1,0 +1,51 @@
+operator:
+  requests:
+    cpu: 5m
+    memory: 64Mi
+  limits:
+    cpu: 100m
+    memory: 128Mi
+webhook:
+  requests:
+    cpu: 5m
+    memory: 64Mi
+  limits:
+    cpu: 100m
+    memory: 128Mi
+csi-driver:
+  resources:
+    requests:
+      cpu: 5m
+      memory: 100Mi
+    limits:
+      cpu: 50m
+      memory: 100Mi
+  server:
+    resources:
+      requests:
+        cpu: 5m
+        memory: 100Mi
+      limits:
+        cpu: 5m
+        memory: 100Mi
+  provisioner:
+    resources:
+      requests:
+        cpu: 5m
+        memory: 100Mi
+  registrar:
+    resources:
+      requests:
+        cpu: 5m
+        memory: 30Mi
+      limits:
+        cpu: 20m
+        memory: 30Mi
+  livenessprobe:
+    resources:
+      requests:
+        cpu: 5m
+        memory: 30Mi
+      limits:
+        cpu: 20m
+        memory: 30Mi
