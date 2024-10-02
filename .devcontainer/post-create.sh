@@ -41,7 +41,7 @@ kubectl apply -f dynatrace/dynakube.yaml
 kubectl -n dynatrace wait --for=condition=Ready --all --timeout 300s pod
 
 #############################################################################
-# Install MariaDB
+# Install MariaDB (Unguard database)
 helm install unguard-mariadb bitnami/mariadb --version 11.5.7 --set primary.persistence.enabled=false --wait --namespace unguard --create-namespace
 
 #############################################################################

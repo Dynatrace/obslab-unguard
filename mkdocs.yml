@@ -2,16 +2,24 @@ site_name: "Dynatrace Observability Lab: Security Vulnerability Testing and Bloc
 repo_name: "View Code on GitHub"
 repo_url: "https://github.com/dynatrace/obslab-unguard"
 nav:
-  - '1. About': index.md
-  - '2. Getting Started': getting-started.md
-  - '3. Installation Explained': installation-explained.md
-  - '4. Access User Interface': access-ui.md
-  - '5. Validate Observability Data': view-observability-data.md
-  - '6. Introduce System Change': introduce-change.md
-  - '7. Review Problem': review-problem.md
-  - '8. Cleanup': cleanup.md
-  - '9. Resources': resources.md
-  - "10. What's Next?": whats-next.md
+  - 'Getting Started':
+    - '1. About': index.md
+    - '2. Getting Started': getting-started.md
+    - '3. Installation Explained': installation-explained.md
+    - '4. Access User Interface': access-ui.md
+    - '5. Validate Observability Data': view-observability-data.md
+    - "6. It's Exploit Time": exploit-time.md
+
+  - "Exploits":
+    - "SQL Injection": sql-injection/index.md
+    - "Command Injection": command-injection/index.md
+    - "CRLF Injection": crlf-injection/index.md
+    - "JWT Forgery": jwt-forgery/index.md
+  
+  - 'Recap, Cleanup and Next Steps':
+    - '8. Cleanup': cleanup.md
+    - '9. Resources': resources.md
+    - "10. What's Next?": whats-next.md
 theme:
   name: material
   palette:
@@ -35,6 +43,10 @@ theme:
     toggle:
       icon: material/brightness-4
       name: Switch to system preference
+  features:
+    - content.code.copy
+    - navigation.sections
+
 markdown_extensions:
   - attr_list
   - toc:

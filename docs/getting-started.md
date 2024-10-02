@@ -1,5 +1,8 @@
 # Getting Started
 
+!!! tip "Larger Images"
+    To enlarge images, right click and open in new tab.
+
 ## Dynatrace Environment
 
 You must have access to a Dynatrace SaaS environment. [Sign up here](https://dt-url.net/trial){target="_blank"}

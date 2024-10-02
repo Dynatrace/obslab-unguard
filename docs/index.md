@@ -18,7 +18,7 @@ Proceed to spin up the demo system below. The docs will then ask you to pick an 
 
 | Deployment         | Tutorial Compatible |
 |--------------------|---------------------|
-| Dynatrace Managed  | ✔️                 |
+| Dynatrace Managed  | ❌                 |
 | Dynatrace SaaS     | ✔️                 |
 
 <div class="grid cards" markdown>
