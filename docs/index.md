@@ -10,7 +10,8 @@ Vulnerabilities in this system include:
 * Java Web Token (JWT) Forgery
 * Log4Shell
 * Server Side Request Forgery (SSRF)
-* Cross Site Scripting Attacks (XSS) 
+* Cross Site Scripting Attacks (XSS)
+* ZIP Slip Vulnerability 
 
 Proceed to spin up the demo system below. The docs will then ask you to pick an adventure!
 

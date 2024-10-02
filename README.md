@@ -8,3 +8,4 @@ Detecting security issues with Dynatrace using the open source and deliberately 
 - Log4Shell
 - Server Side Request Forgery (SSRF)
 - Cross Site Scripting Attacks (XSS)
+- ZIP Slip Vulnerability
