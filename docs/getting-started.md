@@ -29,6 +29,41 @@ In Dynatrace:
 !!! info "API Token Permissions"
     These permissions are required to install the OneAgent in `applicationMode` and an ActiveGate on a Kubernetes cluster.
 
+## Configure Dynatrace
+
+The Dynatrace environment needs to be configured to automatically block incoming attacks.
+
+### Enable OneAgent Features
+
+In Dynatrace:
+
+* Press `ctrl + k`. Search for `settings`
+* Go to `Preferences > OneAgent features`
+* Search for `code-level`
+* Enable all the features (some require the instrumentation to be added in the details as well)
+
+![dynatrace settings 1](images/dt-settings-1.png)
+
+### Enable Vulnerability Analytics
+
+* Go to `Application Security > Application Security`
+* Now go to `Vulnerability Analytics > General Settings`
+* Turn on the `Enable Third-party Vulnerability Analytics` toggle and ensure all languages are checked
+* Switch to the `Code-level Vulnerability Analytics` tab
+* Turn on the `Enable Code-level Vulnerability Analytics toggle
+
+![vulnerability screen 1](images/dt-vulnerability-analytics-1.png)
+![vulnerability screen 1](images/dt-vulnerability-analytics-2.png)
+
+### Enable Runtime Application Protection
+
+* Go to `Application Security > Application Protection > General Settings`
+* Turn on the `Enable Runtime Application Protection` toggle
+* Ensure that `Attack Control Java` is set to `Block; incoming attacks detected and blocked.`
+* Ensure that `Attack Control .NET` is also set to `Block; incoming attacks detected and blocked.`
+
+![runtime application protection](images/dt-runtime-protection-1.png)
+
 ## Start Demo
 
 You've done the hard work! It is time to spin up the demo environment.
