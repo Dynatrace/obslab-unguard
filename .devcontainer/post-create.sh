@@ -2,21 +2,21 @@
 
 #############################################################################
 # Build URL from parts
-full_apps_url="https://${DT_ENV_ID_OBSLAB_SQL_INJECTION_DETECTION}"
+full_apps_url="https://${DT_ENV_ID_OBSLAB_UNGUARD}"
 full_gen2_url=""
 
-if [ "${DT_ENVIRONMENT_OBSLAB_SQL_INJECTION_DETECTION}" = "dev" ]; then
+if [ "${DT_ENVIRONMENT_OBSLAB_UNGUARD}" = "dev" ]; then
   echo "environment is dev"
   full_apps_url+=".dev.apps.dynatracelabs.com"
   # Remove apps.
   full_gen2_url=${full_apps_url/apps.}
-elif [ "${DT_ENVIRONMENT_OBSLAB_SQL_INJECTION_DETECTION}" = "sprint" ]; then
+elif [ "${DT_ENVIRONMENT_OBSLAB_UNGUARD}" = "sprint" ]; then
   echo "environment is sprint"
   full_apps_url+=".sprint.apps.dynatracelabs.com"
   # Remove apps.
   full_gen2_url=${full_apps_url/apps.}
 else
-  echo "DT_ENVIRONMENT_OBSLAB_SQL_INJECTION_DETECTION is either 'live' or some other value. Defaulting to live"
+  echo "DT_ENVIRONMENT_OBSLAB_UNGUARD is either 'live' or some other value. Defaulting to live"
   full_apps_url+=".apps.dynatrace.com"
   full_gen2_url=${full_apps_url/.apps./.live.}
 fi
@@ -34,7 +34,7 @@ helm repo update
 sed -i "s@ENVIRONMENT_URL_PLACEHOLDER@$full_gen2_url@g" dynatrace/dynakube.yaml
 
 kubectl create namespace dynatrace
-kubectl -n dynatrace create secret generic unguard --from-literal=apiToken=$DT_API_TOKEN_OBSLAB_SQL_INJECTION_DETECTION --from-literal=dataIngestToken=$DT_API_TOKEN_OBSLAB_SQL_INJECTION_DETECTION
+kubectl -n dynatrace create secret generic unguard --from-literal=apiToken=$DT_API_TOKEN_OBSLAB_UNGUARD --from-literal=dataIngestToken=$DT_API_TOKEN_OBSLAB_UNGUARD
 helm install dynatrace-operator oci://public.ecr.aws/dynatrace/dynatrace-operator --namespace dynatrace --atomic --values values.yaml
 kubectl apply -f dynatrace/dynakube.yaml
 
