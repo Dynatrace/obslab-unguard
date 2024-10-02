@@ -388,6 +388,48 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#configure-dynatrace" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configure Dynatrace
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Configure Dynatrace">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#enable-oneagent-features" class="md-nav__link">
+    <span class="md-ellipsis">
+      Enable OneAgent Features
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#enable-vulnerability-analytics" class="md-nav__link">
+    <span class="md-ellipsis">
+      Enable Vulnerability Analytics
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#enable-runtime-application-protection" class="md-nav__link">
+    <span class="md-ellipsis">
+      Enable Runtime Application Protection
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#start-demo" class="md-nav__link">
     <span class="md-ellipsis">
       Start Demo
@@ -866,6 +908,48 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#configure-dynatrace" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configure Dynatrace
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Configure Dynatrace">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#enable-oneagent-features" class="md-nav__link">
+    <span class="md-ellipsis">
+      Enable OneAgent Features
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#enable-vulnerability-analytics" class="md-nav__link">
+    <span class="md-ellipsis">
+      Enable Vulnerability Analytics
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#enable-runtime-application-protection" class="md-nav__link">
+    <span class="md-ellipsis">
+      Enable Runtime Application Protection
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#start-demo" class="md-nav__link">
     <span class="md-ellipsis">
       Start Demo
@@ -923,6 +1007,35 @@
 <p class="admonition-title">API Token Permissions</p>
 <p>These permissions are required to install the OneAgent in <code>applicationMode</code> and an ActiveGate on a Kubernetes cluster.</p>
 </div>
+<h2 id="configure-dynatrace">Configure Dynatrace<a class="headerlink" href="#configure-dynatrace" title="Permanent link">#</a></h2>
+<p>The Dynatrace environment needs to be configured to automatically block incoming attacks.</p>
+<h3 id="enable-oneagent-features">Enable OneAgent Features<a class="headerlink" href="#enable-oneagent-features" title="Permanent link">#</a></h3>
+<p>In Dynatrace:</p>
+<ul>
+<li>Press <code>ctrl + k</code>. Search for <code>settings</code></li>
+<li>Go to <code>Preferences &gt; OneAgent features</code></li>
+<li>Search for <code>code-level</code></li>
+<li>Enable all the features (some require the instrumentation to be added in the details as well)</li>
+</ul>
+<p><img alt="dynatrace settings 1" src="../images/dt-settings-1.png" /></p>
+<h3 id="enable-vulnerability-analytics">Enable Vulnerability Analytics<a class="headerlink" href="#enable-vulnerability-analytics" title="Permanent link">#</a></h3>
+<ul>
+<li>Go to <code>Application Security &gt; Application Security</code></li>
+<li>Now go to <code>Vulnerability Analytics &gt; General Settings</code></li>
+<li>Turn on the <code>Enable Third-party Vulnerability Analytics</code> toggle and ensure all languages are checked</li>
+<li>Switch to the <code>Code-level Vulnerability Analytics</code> tab</li>
+<li>Turn on the `Enable Code-level Vulnerability Analytics toggle</li>
+</ul>
+<p><img alt="vulnerability screen 1" src="../images/dt-vulnerability-analytics-1.png" />
+<img alt="vulnerability screen 1" src="../images/dt-vulnerability-analytics-2.png" /></p>
+<h3 id="enable-runtime-application-protection">Enable Runtime Application Protection<a class="headerlink" href="#enable-runtime-application-protection" title="Permanent link">#</a></h3>
+<ul>
+<li>Go to <code>Application Security &gt; Application Protection &gt; General Settings</code></li>
+<li>Turn on the <code>Enable Runtime Application Protection</code> toggle</li>
+<li>Ensure that <code>Attack Control Java</code> is set to <code>Block; incoming attacks detected and blocked.</code></li>
+<li>Ensure that <code>Attack Control .NET</code> is also set to <code>Block; incoming attacks detected and blocked.</code></li>
+</ul>
+<p><img alt="runtime application protection" src="../images/dt-runtime-protection-1.png" /></p>
 <h2 id="start-demo">Start Demo<a class="headerlink" href="#start-demo" title="Permanent link">#</a></h2>
 <p>You've done the hard work! It is time to spin up the demo environment.</p>
 <p>Click this button to open the demo environment. This will open in a new tab.</p>

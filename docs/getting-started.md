@@ -39,7 +39,7 @@ In Dynatrace:
 
 * Press `ctrl + k`. Search for `settings`
 * Go to `Preferences > OneAgent features`
-* Search for `code-level`
+* Search for `code level`
 * Enable all the features (some require the instrumentation to be added in the details as well)
 
 ![dynatrace settings 1](images/dt-settings-1.png)
