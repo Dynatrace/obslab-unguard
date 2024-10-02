@@ -9,10 +9,10 @@
       
       
       
-        <link rel="prev" href="../access-ui/">
+        <link rel="prev" href="../log4shell/">
       
       
-        <link rel="next" href="../exploit-time/">
+        <link rel="next" href="../xss/">
       
       
       <link rel="icon" href="../assets/images/favicon.png">
@@ -20,7 +20,7 @@
     
     
       
-        <title>5. Validate Observability Data - Dynatrace Observability Lab: Security Vulnerability Testing and Blocking with Unguard</title>
+        <title>SSRF - Dynatrace Observability Lab: Security Vulnerability Testing and Blocking with Unguard</title>
       
     
     
@@ -71,6 +71,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#server-side-request-forgery-ssrf" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -103,7 +108,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              5. Validate Observability Data
+              SSRF
             
           </span>
         </div>
@@ -253,8 +258,6 @@
       
   
   
-    
-  
   
   
     
@@ -266,11 +269,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
         
           
           <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="">
@@ -284,7 +287,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_1">
             <span class="md-nav__icon md-icon"></span>
             Getting Started
@@ -379,17 +382,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../view-observability-data/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -398,7 +394,6 @@
   
 
       </a>
-      
     </li>
   
 
@@ -436,8 +431,10 @@
       
   
   
+    
   
   
+  
     
     
     
@@ -447,11 +444,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
         
           
           <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
@@ -465,7 +462,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             Exploits
@@ -581,10 +578,19 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../ssrf/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -593,6 +599,7 @@
   
 
       </a>
+      
     </li>
   
 
@@ -774,6 +781,8 @@
   
   
   
+    
+  
   
 </nav>
                   </div>
@@ -791,15 +800,10 @@
   
 
 
-  <h1>5. Validate Observability Data</h1>
-
-<p>In Dynatrace, press <code>ctrl + k</code> and search for <code>Services</code>.</p>
-<p>You should see the Unguard microservices listed:</p>
-<p><img alt="unguard microservices" src="../images/dt-services.png" /></p>
-<div class="grid cards">
-<ul>
-<li><a href="../exploit-time/">Click Here to Continue <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13.22 19.03a.75.75 0 0 1 0-1.06L18.19 13H3.75a.75.75 0 0 1 0-1.5h14.44l-4.97-4.97a.749.749 0 0 1 .326-1.275.749.749 0 0 1 .734.215l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"/></svg></span></a></li>
-</ul>
+<h1 id="server-side-request-forgery-ssrf">Server Side Request Forgery (SSRF)<a class="headerlink" href="#server-side-request-forgery-ssrf" title="Permanent link">#</a></h1>
+<div class="admonition note">
+<p class="admonition-title">Coming soon!</p>
+<p>This content is coming soon.</p>
 </div>
 
 
