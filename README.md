@@ -7,4 +7,4 @@ Detecting security issues with Dynatrace using the open source and deliberately 
 - JWT Forgery
 - Log4Shell
 - Server Side Request Forgery (SSRF)
-- 
+- Cross Site Scripting Attacks (XSS)
