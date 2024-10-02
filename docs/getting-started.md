@@ -26,7 +26,8 @@ In Dynatrace:
     * `activeGateTokenManagement.create`
     * `metrics.ingest`
 
-These permissions are required to install the OneAgent in `applicationMode` + an ActiveGate on a Kubernetes cluster.
+!!! info "API Token Permissions"
+    These permissions are required to install the OneAgent in `applicationMode` and an ActiveGate on a Kubernetes cluster.
 
 ## Start Demo
 
