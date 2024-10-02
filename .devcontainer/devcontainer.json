@@ -43,7 +43,7 @@
 	// Add recommended secrets
 	"secrets": {
 	 	  "DT_ENV_ID_OBSLAB_UNGUARD": {
-	 		"description": "eg. acb12345 from https://abc12345.live.dynatrace.com"
+	 		"description": "eg. abc12345 from https://abc12345.live.dynatrace.com"
 		},
 		  "DT_ENVIRONMENT_OBSLAB_UNGUARD": {
 	    	        "description": "live, sprint or dev. Defaults to live"
