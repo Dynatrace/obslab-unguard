@@ -47,3 +47,14 @@ helm install unguard-mariadb bitnami/mariadb --version 11.5.7 --set primary.pers
 #############################################################################
 # Install Unguard
 helm install unguard  oci://ghcr.io/dynatrace-oss/unguard/chart/unguard --wait --namespace unguard --create-namespace
+
+# Creation Ping
+curl -X POST https://grzxx1q7wd.execute-api.us-east-1.amazonaws.com/default/codespace-tracker \
+  -H "Content-Type: application/json" \
+  -d "{
+    \"tenant\": \"$DT_ENV_ID_OBSLAB_UNGUARD\",
+    \"dt_environment\": \"$DT_ENVIRONMENT_OBSLAB_UNGUARD\",
+    \"repo\": \"$GITHUB_REPOSITORY\",
+    \"demo\": \"obslab-unguard\",
+    \"codespace.name\": \"$CODESPACE_NAME\"
+  }"
