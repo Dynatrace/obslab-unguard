@@ -506,6 +506,17 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Command Injection
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -515,6 +526,61 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#exploitation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exploitation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#result-sql-injection-blocked" class="md-nav__link">
+    <span class="md-ellipsis">
+      Result: SQL Injection Blocked
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#validate-in-dynatrace" class="md-nav__link">
+    <span class="md-ellipsis">
+      Validate in Dynatrace
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#view-attack-attempt-details" class="md-nav__link">
+    <span class="md-ellipsis">
+      View Attack Attempt Details
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -784,6 +850,50 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#exploitation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exploitation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#result-sql-injection-blocked" class="md-nav__link">
+    <span class="md-ellipsis">
+      Result: SQL Injection Blocked
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#validate-in-dynatrace" class="md-nav__link">
+    <span class="md-ellipsis">
+      Validate in Dynatrace
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#view-attack-attempt-details" class="md-nav__link">
+    <span class="md-ellipsis">
+      View Attack Attempt Details
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -801,9 +911,66 @@
 
 
 <h1 id="command-injection">Command Injection<a class="headerlink" href="#command-injection" title="Permanent link">#</a></h1>
-<div class="admonition note">
-<p class="admonition-title">Coming soon!</p>
-<p>This content is coming soon.</p>
+<p>Unguard has a command injection vulnerability in the image posting feature of the <code>proxy-service</code>.</p>
+<p>Let's attempt that now.</p>
+<h2 id="exploitation">Exploitation<a class="headerlink" href="#exploitation" title="Permanent link">#</a></h2>
+<p>Posting the following will result in executing <code>whoami</code> after <code>example.com</code> has been fetched.</p>
+<p>To exploit the command injection vulnerability in the <code>proxy-service</code>:</p>
+<ul>
+<li>Log in to Unguard</li>
+<li>Post an image with an URL that adds a second command to the <code>curl</code> call.</li>
+</ul>
+<div class="highlight"><pre><span></span><code>example.com &amp;&amp; whoami #
+</code></pre></div>
+<p><img alt="cmd injection input screenshot" src="../images/unguard-cmd-injection-input.png" /></p>
+<div class="admonition info">
+<p class="admonition-title">Remove original curl arguments</p>
+<p>Notice the trailing <code>#</code> will comment out all the other original curl arguments, which is essential.</p>
+</div>
+<h2 id="result-sql-injection-blocked">Result: SQL Injection Blocked<a class="headerlink" href="#result-sql-injection-blocked" title="Permanent link">#</a></h2>
+<div class="admonition success">
+<p class="admonition-title">Success</p>
+<p>Dynatrace OneAgent has successfully blocked the SQL injection attack!</p>
+</div>
+<p>To verify that it really has been blocked:</p>
+<ul>
+<li>Click <code>Home</code></li>
+<li>Go back to your profile</li>
+<li>You should still see the empty box and <code>Add bio</code> text</li>
+</ul>
+<p><img alt="unguard SQL injection blocked" src="../images/unguard-cmd-injection-blocked.png" /></p>
+<h2 id="validate-in-dynatrace">Validate in Dynatrace<a class="headerlink" href="#validate-in-dynatrace" title="Permanent link">#</a></h2>
+<p>Let's see how Dynatrace visualises these attack attempts.</p>
+<p>In Dynatrace:</p>
+<ul>
+<li>Press <code>ctrl + k</code>. Search for <code>attacks</code></li>
+</ul>
+<div class="admonition tip">
+<p class="admonition-title">Enlarge Images</p>
+<p>Remember, right click and "open in a new tab"
+to enlarge images</p>
+</div>
+<p>You should see <code>1/1 Attacks blocked</code> and <code>0/1 Attacks exploited</code>.</p>
+<p><img alt="attacks screen" src="../images/dt-attacks-cmd-injection-blocked.png" /></p>
+<h2 id="view-attack-attempt-details">View Attack Attempt Details<a class="headerlink" href="#view-attack-attempt-details" title="Permanent link">#</a></h2>
+<p>Scroll down to the section titled <code>1 attack detected</code> and follow the link to see the details of this attack.</p>
+<p>Dynatrace provides all the relevant information such as:</p>
+<ul>
+<li>A unique ID for this attack attempt so tracking is easier</li>
+<li>The entrypoint (a user bio page)</li>
+<li>The SQL statement (actual injection attempt)</li>
+<li>The vulnerable line of code and function</li>
+</ul>
+<p><img alt="attack details 1" src="../images/dt-attack-details-cmd-injection-1.png" />
+<img alt="attack details 2" src="../images/dt-attack-details-cmd-injection-2.png" />
+<img alt="attack details 3" src="../images/dt-attack-details-cmd-injection-3.png" /></p>
+<div class="admonition success">
+<p class="admonition-title">Command Injection Prevented</p>
+<p>🎉 Dynatrace OneAgent has prevented a Command injection attack on your infrastructure.</p>
+</div>
+<div class="admonition question">
+<p class="admonition-title">What's Next?</p>
+<p>Feel free to follow some of the other exploit tutorials or if you're finished, head to the <a href="../cleanup/">cleanup page</a> to cleanup your demo environment.</p>
 </div>
 
 
