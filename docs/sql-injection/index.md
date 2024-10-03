@@ -65,7 +65,7 @@ Dynatrace provides all the relevant information such as:
 
 ![attack details 1](../images/dt-attack-details-1.png)
 ![attack details 2](../images/dt-attack-details-2.png)
-![attack details 3](../images/dt-attack-details-2.png)
+![attack details 3](../images/dt-attack-details-3.png)
 
 !!! success "SQL Injection Prevented"
     🎉 Dynatrace OneAgent has prevented an SQL injection attack on your infrastructure.
