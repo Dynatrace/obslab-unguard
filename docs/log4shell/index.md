@@ -1,4 +1,4 @@
-# Log4Shell
+# Log4Shell / JNDI Injection
 
 !!! note "Coming soon!"
     This content is coming soon.

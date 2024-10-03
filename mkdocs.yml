@@ -13,12 +13,7 @@ nav:
   - "Exploits":
     - "SQL Injection": sql-injection/index.md
     - "Command Injection": command-injection/index.md
-    - "CRLF Injection": crlf-injection/index.md
-    - "JWT Forgery": jwt-forgery/index.md
-    - "Log4Shell": log4shell/index.md
-    - "SSRF": ssrf/index.md
-    - "XSS Attacks": xss/index.md
-    - "ZIP Slip": zip-slip/index.md
+    - "Log4Shell / JNDI": log4shell/index.md
   
   - 'Recap, Cleanup and Next Steps':
     - '8. Cleanup': cleanup.md
