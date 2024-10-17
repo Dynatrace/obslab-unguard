@@ -13,7 +13,7 @@ To inject an SQL command, you simply need to log into Unguard, go to your profil
 !!! info "If the button says `Add Bio`"
 
     ```
-    ' WHERE 0 = 1; UPDATE bio SET bio_text = 'injected' WHERE 1 = 1; --
+    '); UPDATE bio SET bio_text = 'injected' WHERE 1 = 1; --
     ```
 
 !!! info "If the button says `Update Bio`"

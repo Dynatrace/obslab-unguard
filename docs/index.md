@@ -1,5 +1,8 @@
 # Using Dynatrace to Detect and Block Security Vulnerabilities
 
+--8<-- "snippets/disclaimer.md"
+--8<-- "snippets/view-code.md"
+
 In this hands-on demo, you will use Dynatrace to detect and proactively block common application security vulnerabilities.
 
 Vulnerabilities in this system include:
