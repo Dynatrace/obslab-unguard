@@ -34,8 +34,13 @@
 
     
     
+  <!-- Add scripts that need to run before here -->
+  
       
     
+  <!-- Add scripts that need to run afterwards here -->
+  <script type="text/javascript" src="https://js-cdn.dynatrace.com/jstag/145e12d594f/bf64904yne/fa06550f997deaab_complete.js" crossorigin="anonymous"></script>
+
     
       
         
@@ -752,6 +757,12 @@
 
 
 <h1 id="resources">Resources<a class="headerlink" href="#resources" title="Permanent link">#</a></h1>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  dynatrace.sendBizEvent('page_load', {"page": "9. resources"});
+});
+</script>
+
 <h2 id="why-would-i-use-the-dynatrace-otel-collector">Why would I use the Dynatrace OTEL Collector?<a class="headerlink" href="#why-would-i-use-the-dynatrace-otel-collector" title="Permanent link">#</a></h2>
 <p>See <a href="https://docs.dynatrace.com/docs/extend-dynatrace/opentelemetry/collector#dt-collector-dist" target="_blank">here</a>.</p>
 

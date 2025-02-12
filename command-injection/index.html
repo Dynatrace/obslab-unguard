@@ -34,8 +34,13 @@
 
     
     
+  <!-- Add scripts that need to run before here -->
+  
       
     
+  <!-- Add scripts that need to run afterwards here -->
+  <script type="text/javascript" src="https://js-cdn.dynatrace.com/jstag/145e12d594f/bf64904yne/fa06550f997deaab_complete.js" crossorigin="anonymous"></script>
+
     
       
         
@@ -806,6 +811,12 @@
 
 
 <h1 id="command-injection">Command Injection<a class="headerlink" href="#command-injection" title="Permanent link">#</a></h1>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  dynatrace.sendBizEvent('page_load', {"page": "7b. command-injection"});
+});
+</script>
+
 <p>Unguard has a command injection vulnerability in the image posting feature of the <code>proxy-service</code>.</p>
 <p>Let's attempt that now.</p>
 <h2 id="exploitation">Exploitation<a class="headerlink" href="#exploitation" title="Permanent link">#</a></h2>

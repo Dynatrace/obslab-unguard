@@ -32,8 +32,13 @@
 
     
     
+  <!-- Add scripts that need to run before here -->
+  
       
     
+  <!-- Add scripts that need to run afterwards here -->
+  <script type="text/javascript" src="https://js-cdn.dynatrace.com/jstag/145e12d594f/bf64904yne/fa06550f997deaab_complete.js" crossorigin="anonymous"></script>
+
     
       
         
@@ -685,6 +690,12 @@
 
 
   <h1>10. What's Next?</h1>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  dynatrace.sendBizEvent('page_load', {"page": "10. whats-next"});
+});
+</script>
 
 <ul>
 <li><a href="https://github.com/dynatrace-oss/unguard" target="_blank">Dynatrace Unguard Source Code on GitHub</a></li>
