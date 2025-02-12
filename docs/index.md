@@ -2,6 +2,7 @@
 
 --8<-- "snippets/disclaimer.md"
 --8<-- "snippets/view-code.md"
+--8<-- "snippets/bizevent-homepage.js"
 
 In this hands-on demo, you will use Dynatrace to detect and proactively block common application security vulnerabilities.
 

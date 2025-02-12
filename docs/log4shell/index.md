@@ -1,5 +1,7 @@
 # Log4Shell / JNDI Injection
 
+--8<-- "snippets/bizevent-log4shell-jndi.js"
+
 !!! note "Coming soon!"
     This content is coming soon.
 

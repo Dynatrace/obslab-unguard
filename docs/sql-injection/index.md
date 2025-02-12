@@ -1,5 +1,7 @@
 # SQL Injection
 
+--8<-- "snippets/bizevent-sql-injection.js"
+
 Unguard has an SQL injection vulnerability in the `profile-service`. You can exploit this via the `User profile` setting.
 
 Let's attempt that now.

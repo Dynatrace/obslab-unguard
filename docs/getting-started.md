@@ -1,5 +1,7 @@
 # Getting Started
 
+--8<-- "snippets/bizevent-getting-started.js"
+
 !!! tip "Larger Images"
     To enlarge images, right click and open in new tab.
 

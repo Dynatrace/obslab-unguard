@@ -1,3 +1,5 @@
+--8<-- "snippets/bizevent-validate-observability-data.js"
+
 In Dynatrace, press `ctrl + k` and search for `Services`.
 
 You should see the Unguard microservices listed:

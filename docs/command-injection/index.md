@@ -1,5 +1,7 @@
 # Command Injection
 
+--8<-- "snippets/bizevent-command-injection.js"
+
 Unguard has a command injection vulnerability in the image posting feature of the `proxy-service`.
 
 Let's attempt that now.

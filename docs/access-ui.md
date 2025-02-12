@@ -1,5 +1,7 @@
 ## Access The Demo User Interface
 
+--8<-- "snippets/bizevent-access-user-interface.js"
+
 Expose the user interface on port 8080 by port-forwarding:
 
 ```
