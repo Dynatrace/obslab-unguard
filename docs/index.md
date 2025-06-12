@@ -14,13 +14,6 @@ Vulnerabilities in this system include:
 
 Proceed to spin up the demo system below. The docs will then ask you to pick an adventure!
 
-## Compatibility
-
-| Deployment         | Tutorial Compatible |
-|--------------------|---------------------|
-| Dynatrace Managed  | ❌                 |
-| Dynatrace SaaS     | ✔️                 |
-
 <div class="grid cards" markdown>
 - [Click Here to Begin :octicons-arrow-right-24:](getting-started.md)
 </div>

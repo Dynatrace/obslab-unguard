@@ -24,19 +24,7 @@ The Dynatrace details you provided during startup will be encrypted, stored in G
 
 The system may still be loading.
 
-Wait until the `Running postCreate command` loading spinner disappears.
-
-!!! bug "TODO"
-    Update image
-
-![codespace loading](images/codespace-loading.png)
-
-Wait here until the terminal prompt looks like this (your username will differ).
-
-!!! bug "TODO"
-    Update Image
-
-![codespace interactive](images/codespace-interactive.png)
+Wait until the `Running postCreate command` loading spinner disappears and the terminal prompt refreshes (it should be empty).
 
 ## Wait for Application
 
