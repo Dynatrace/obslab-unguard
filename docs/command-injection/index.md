@@ -25,10 +25,10 @@ example.com && whoami #
     Notice the trailing `#` will comment out all the other original curl arguments, which is essential.
 
 
-## Result: SQL Injection Blocked
+## Result: Command Injection Blocked
 
 !!! success
-    Dynatrace OneAgent has successfully blocked the SQL injection attack!
+    Dynatrace OneAgent has successfully blocked the Command injection attack!
 
 To verify that it really has been blocked:
 
@@ -36,7 +36,7 @@ To verify that it really has been blocked:
 * Go back to your profile
 * You should still see the empty box and `Add bio` text
 
-![unguard SQL injection blocked](../images/unguard-cmd-injection-blocked.png)
+![unguard Command injection blocked](../images/unguard-cmd-injection-blocked.png)
 
 ## Validate in Dynatrace
 
@@ -62,7 +62,7 @@ Dynatrace provides all the relevant information such as:
 
 * A unique ID for this attack attempt so tracking is easier
 * The entrypoint (a user bio page)
-* The SQL statement (actual injection attempt)
+* The Command statement (actual injection attempt)
 * The vulnerable line of code and function
 
 ![attack details 1](../images/dt-attack-details-cmd-injection-1.png)
