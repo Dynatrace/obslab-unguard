@@ -584,9 +584,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#result-sql-injection-blocked" class="md-nav__link">
+  <a href="#result-command-injection-blocked" class="md-nav__link">
     <span class="md-ellipsis">
-      Result: SQL Injection Blocked
+      Result: Command Injection Blocked
     </span>
   </a>
   
@@ -804,9 +804,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#result-sql-injection-blocked" class="md-nav__link">
+  <a href="#result-command-injection-blocked" class="md-nav__link">
     <span class="md-ellipsis">
-      Result: SQL Injection Blocked
+      Result: Command Injection Blocked
     </span>
   </a>
   
@@ -872,10 +872,10 @@ document.addEventListener('DOMContentLoaded', function() {
 <p class="admonition-title">Remove original curl arguments</p>
 <p>Notice the trailing <code>#</code> will comment out all the other original curl arguments, which is essential.</p>
 </div>
-<h2 id="result-sql-injection-blocked">Result: SQL Injection Blocked<a class="headerlink" href="#result-sql-injection-blocked" title="Permanent link">#</a></h2>
+<h2 id="result-command-injection-blocked">Result: Command Injection Blocked<a class="headerlink" href="#result-command-injection-blocked" title="Permanent link">#</a></h2>
 <div class="admonition success">
 <p class="admonition-title">Success</p>
-<p>Dynatrace OneAgent has successfully blocked the SQL injection attack!</p>
+<p>Dynatrace OneAgent has successfully blocked the Command injection attack!</p>
 </div>
 <p>To verify that it really has been blocked:</p>
 <ul>
@@ -883,7 +883,7 @@ document.addEventListener('DOMContentLoaded', function() {
 <li>Go back to your profile</li>
 <li>You should still see the empty box and <code>Add bio</code> text</li>
 </ul>
-<p><img alt="unguard SQL injection blocked" src="../images/unguard-cmd-injection-blocked.png" /></p>
+<p><img alt="unguard Command injection blocked" src="../images/unguard-cmd-injection-blocked.png" /></p>
 <h2 id="validate-in-dynatrace">Validate in Dynatrace<a class="headerlink" href="#validate-in-dynatrace" title="Permanent link">#</a></h2>
 <p>Let's see how Dynatrace visualises these attack attempts.</p>
 <p>In Dynatrace:</p>
@@ -903,7 +903,7 @@ to enlarge images</p>
 <ul>
 <li>A unique ID for this attack attempt so tracking is easier</li>
 <li>The entrypoint (a user bio page)</li>
-<li>The SQL statement (actual injection attempt)</li>
+<li>The Command statement (actual injection attempt)</li>
 <li>The vulnerable line of code and function</li>
 </ul>
 <p><img alt="attack details 1" src="../images/dt-attack-details-cmd-injection-1.png" />
